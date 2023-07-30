@@ -32,3 +32,11 @@ inquirer
     },
 
   ])
+
+  .then(answers => {
+    const { logoName, textColor, logoShape, logoColor } = answers;
+    generateLogo(logoName, textColor, logoShape, logoColor);
+  })
+  .catch(error=>{
+    console.error("Error:", error);
+  });
